@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Pathway Extreme';
-    src: url('./font/PE-var-font.ttf');
+    src: url('./font/PE-var-font.woff2');
 }
 body {
     height: 500vh;
