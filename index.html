@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Timeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="line-container">
+        <svg id="line" viewBox="0 0 225 894" fill="none">
+            <path d="M180 0.5V58C190.333 57.6667 212.1 64.2 216.5 93H224V112H211.5C211.167 114.167 209.2 119.2 204 122L211.5 150.5L197.5 153L184 160L178 138L173.5 160L161.5 153L146 152L152.5 122C150.333 120.167 145.8 115.6 145 112H132L117 270H224V313.5C223.5 325.5 213 350.4 175 354V488C136.667 487.667 58.7 494.2 53.5 523C52.3333 533.333 75 555.3 175 560.5V653.5H55L44 625.5L34 653.5H2L27.5 673.5L18 701.5L44 686L69 701.5L60.5 673.5L83 656.5V740.5V793.5H178L162 811V833H179V809H181.5V792H203L222 809H206V811H223L224 833L206 851V835.5H164L181.5 852.5H203V893.5" stroke="black"/>
+        </svg>
+    </div>
+
+    <section class="one">
+        <h1>Corporate <span>Brand</span> Identity Timeline</h1>
+        <h2>By Luke Moore</h2>
+        <h3>Scroll to begin</h3>
+    </section>
+
+    <section class="two">
+        <h2>Pabst Blue Ribbon - <span>1882</span></h2>
+        <div class="wrapper">
+            <img alt="Pabst Blue Ribbon logo" src="logos/pbr_logo.png">
+            <p>Originally called Best Select, and then Pabst Select, 
+                the current name came from the blue ribbons that were
+                 tied around the neck of the bottle, a practice that ran 
+                 from 1882 until 1916, and discontinued due to a silk shortage during World War I.</p>
+        </div>
+    </section>
+
+    <section class="three">
+        <h2>Colgate - <span>1897</span></h2>
+        <div class="wrapper">
+            <p>The very first logo for the toothpaste was created in 1897 
+                and featured sleek white lettering on a red background. 
+                The red and white color palette of the logo was symbolizing power,
+                 confidence, and passion. The red background made the white color look
+                  even brighter and fresher, evoking a sense of cleanliness and shining.
+            </p>
+            <img alt="Colgate logo" src="logos/colgate_logo.png">
+        </div>
+    </section>
+
+    <section class="four">
+        <h2>Du Pont - <span>1907</span></h2>
+        <div class="wrapper">
+            <img id="dupont" alt="Du Pont logo" src="logos/dupont_logo.png">
+            <p>The DuPont oval became the official corporate trademark in 1909. The proportions
+                 and layout of the DuPont oval were mathematically defined and standardized in 1948,
+                  when an internal audit revealed that more than 45 variations of the oval
+                   were in use within the company.</p>
+        </div>
+    </section>
+
+    <section class="five">
+        <h2>Macy's - <span>1948</span></h2>
+        <div class="wrapper">
+            <p>In the middle of the 20th century, designers removed the address to emphasize the name of 
+                the department store chain. The word “Macy’s” was black as before. The four letters 
+                after the “M” have become lowercase, and the apostrophe has become a small five-pointed star above the “y.”
+                 This is the first time the logo would represent the brand we recognize today.
+            
+            </p>
+            <img id="macys" alt="Macy's logo" src="logos/macys_logo.png">
+        </div>
+    </section>
+
+    <section class="six">
+        <h2>JP Morgan Chase - <span>1961</span></h2>
+        <div class="wrapper">
+            <img id="chase" alt="Chase Bank logo" src="logos/chase_logo.png">
+            <p>The four parts of the octagon—originally black, brown, green, and blue—represent forward motion, while 
+                the white square in the middle suggests progress originates from the center. "Like the bank itself, 
+                the symbol is a single unit made up of separate parts," the designers noted. The geometric design 
+                was one of the very first abstract corporate logos, sparking a change in marketing and branding.</p>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        let path = document.querySelector('path');
+        let pathLength = path.getTotalLength();
+        path.style.strokeDasharray = pathLength + ' ' + pathLength;
+        path.style.strokeDashoffset = pathLength;
+
+        document.addEventListener('scroll', () => {
+            let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            let drawLength = pathLength * scrollPercentage;
+
+            path.style.strokeDashoffset = pathLength - drawLength;
+        });
+    </script>
+</body>
+</html>
