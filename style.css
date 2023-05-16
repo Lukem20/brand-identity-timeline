@@ -7,6 +7,7 @@ body {
     margin: 0;
     font-family: 'Pathway Extreme';
     font-size: 2em;
+    background-color: #F5F5F5;
 }
 
 .line-container {
@@ -22,12 +23,21 @@ body {
     display: inline-block;
     height: 100%;
 }
-
+#intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 span {
     color: red;
 }
+#name {
+    font-weight: 100;
+}
 h3 {
     color: red;
+    font-size: 0.7em;
+    font-weight: 500;
 }
 
 @-webkit-keyframes bounce {
@@ -35,7 +45,6 @@ h3 {
     50% { transform: translateY(10px) }
     100% { transform: translateY(-10px) }
 }
-
 @keyframes bounce {
     0% { transform: translateY(-10px)  }
     50% { transform: translateY(10px) }
@@ -47,11 +56,16 @@ h3 {
     -ms-animation: bounce 3s infinite ease-in-out; 
     -moz-animation: bounce 3s infinite ease-in-out; 
     animation: bounce 3s infinite ease-in-out;
+    text-transform: uppercase;
 }
 
 section {
     height: 100vh;
     text-align: center;
+    margin-bottom: 4rem;
+}
+section h2 {
+    font-weight: 600;
 }
 .wrapper {
     display: flex;
