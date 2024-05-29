@@ -43,11 +43,23 @@ span {
     text-align: center;
 }
 #author-name {
+    z-index: 1;
     font-weight: 100;
     font-size: 1.2em;
     letter-spacing: -0.04em;
+    margin-bottom: 0;
+}
+#author-name a {
+    color: black;
+}
+#github {
+    color: black;
+    font-size: 0.5em;
+    margin: 1em 0;
+    z-index: 1;
 }
 #bounce {
+    margin-top: 3em;
     font-weight: 700;
     color: red;
     font-size: 0.7em;
