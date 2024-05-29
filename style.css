@@ -1,3 +1,4 @@
+/* *** Global Styles *** */
 @font-face {
     font-family: 'Pathway Extreme';
     src: url('./font/PE-var-font.woff2');
@@ -9,7 +10,16 @@ body {
     font-size: 2em;
     background-color: #F5F5F5;
 }
+section {
+    height: 100vh;
+    margin-bottom: 4rem;
+}
+span {
+    color: red;
+}
 
+
+/* *** SVG line styles *** */
 .line-container {
     position: fixed;
     top: 0;
@@ -23,23 +33,32 @@ body {
     display: inline-block;
     height: 100%;
 }
+
+
+/* *** Title intro section *** */
 #intro-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
-span {
-    color: red;
-}
-#name {
+#author-name {
     font-weight: 100;
+    font-size: 1.2em;
+    letter-spacing: -0.04em;
 }
-h3 {
+#bounce {
+    font-weight: 700;
     color: red;
     font-size: 0.7em;
-    font-weight: 500;
+    letter-spacing: 0.05em;
+    -webkit-animation: bounce 3s infinite ease-in-out;
+    -o-animation: bounce 3s infinite ease-in-out;
+    -ms-animation: bounce 3s infinite ease-in-out; 
+    -moz-animation: bounce 3s infinite ease-in-out; 
+    animation: bounce 3s infinite ease-in-out;
+    text-transform: uppercase;
 }
-
 @-webkit-keyframes bounce {
     0% { transform: translateY(-10px)  }
     50% { transform: translateY(10px) }
@@ -50,45 +69,34 @@ h3 {
     50% { transform: translateY(10px) }
     100% { transform: translateY(-10px) }
 }
-#bounce {
-    -webkit-animation: bounce 3s infinite ease-in-out;
-    -o-animation: bounce 3s infinite ease-in-out;
-    -ms-animation: bounce 3s infinite ease-in-out; 
-    -moz-animation: bounce 3s infinite ease-in-out; 
-    animation: bounce 3s infinite ease-in-out;
-    text-transform: uppercase;
-}
 
-section {
-    height: 100vh;
-    text-align: center;
-    margin-bottom: 4rem;
+
+/* *** Timeline Section *** */
+.timeline-section {
+    display: block;
 }
-section h2 {
+.business-name {
+    text-align: center;
     font-weight: 600;
 }
-.wrapper {
+.business-content-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 0 3rem;
-    gap: 8rem;
+    align-items: center;
+    padding: 0 3em;
+    gap: 1em;
+    flex-wrap: wrap;
 }
 img {
     width: auto;
-    max-width: 500px;
-    max-height: 100%;
-}
-#dupont{ 
-    max-height: 120px
-}
-#chase {
-    max-height: 120px;
-}
-#macys {
-    max-height: 200px;
+    max-height: 70%;
 }
 p {
     margin: 0;
-    width: 400px;
+    width: 500px;
     font-size: 0.8em;
+}
+
+#macys {
+    width: 425px;
 }
