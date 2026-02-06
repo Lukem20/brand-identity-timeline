@@ -89,7 +89,7 @@ h1 {
 .timeline-section {
     display: block;
     height: 100vh;
-    margin: 2em 0;
+    margin: 0 0;
 }
 .business-name {
     text-align: center;
