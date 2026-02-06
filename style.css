@@ -27,6 +27,7 @@ span {
 #line {
     display: inline-block;
     height: 100%;
+    stroke-width: 2px;
 }
 
 
